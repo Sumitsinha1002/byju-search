@@ -1,0 +1,29 @@
+.common{
+    padding: 5px;
+}
+.container{
+    width: 80%;
+    margin:0 auto;
+}
+
+.header{
+    background-color: #3f51b5;
+    opacity: 0.7;
+}
+
+.header-cell{
+    color: white;
+}
+::ng-deep .mat-sort-header-arrow {
+    color: #fff;
+}
+
+.filter-input{
+    border-bottom: 1px solid;
+    width: 79%;
+    font-size: 12px;
+    caret-color: white;
+}
+.filter-input::placeholder {
+    color: white;
+  }

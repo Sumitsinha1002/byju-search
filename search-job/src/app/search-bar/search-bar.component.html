@@ -1,0 +1,23 @@
+<form class="search-container">
+  <mat-form-field class="search-field">
+    <input type="number" [(ngModel)] = "search.experience" name = "experience" placeholder="Type Experience" pattern="^$|^([0-9]|[1-9][0-9]|[1][0][0])?" aria-label="Number" matInput >
+    
+    
+  </mat-form-field>
+  <mat-form-field class="search-field">
+    <input type="text" [(ngModel)] = "search.skills" name = "skills" placeholder="Type Skills" aria-label="Number" matInput >
+    
+  </mat-form-field>
+  <mat-form-field class="search-field">
+    <input type="text" [(ngModel)] = "search.location" name = "location" placeholder="Type Location" aria-label="Number" matInput >
+    
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click) = "searchJobs()" class="search-button">
+    <mat-icon>search</mat-icon>
+    
+</button>
+<button mat-raised-button color="primary" (click) = "resetJobs()" class="search-button">
+    <mat-icon>refresh</mat-icon>
+    
+</button>
+</form>

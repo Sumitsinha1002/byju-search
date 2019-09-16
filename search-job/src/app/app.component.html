@@ -1,11 +1,12 @@
-<div >
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field>
-</form>
+<div class="app-container" >
+        <mat-toolbar color="primary">
+                <mat-toolbar-row>
+                <span>Job Search</span>
+                  
+                
+                 </mat-toolbar-row>
+                 </mat-toolbar>
+                 <app-login-component *ngIf = "showLogin"></app-login-component>
+<app-search-bar *ngIf = "!showLogin" ></app-search-bar>
+<app-search-result *ngIf = "!showLogin" ></app-search-result> 
 </div>

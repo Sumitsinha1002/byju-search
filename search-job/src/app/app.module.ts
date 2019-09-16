@@ -2,31 +2,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {
-
-  MatIconModule, MatInputModule,
-  MatAutocompleteModule, MatChipsModule,
-  MatFormFieldModule
-
-
-} from '@angular/material';
-
+import {DemoMaterialModule} from '../maretial-module';
+import { HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { CommonService } from './services/common-service.service'
 
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    SearchResultComponent,
+    SearchBarComponent,
+    LoginComponentComponent],
   imports: [
     BrowserModule,BrowserAnimationsModule,
     FormsModule,ReactiveFormsModule,
-    MatIconModule, MatInputModule,
-    MatAutocompleteModule,
-    MatChipsModule,
-    MatFormFieldModule
+    DemoMaterialModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [HttpClientModule,CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
